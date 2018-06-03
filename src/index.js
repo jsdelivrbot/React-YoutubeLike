@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+// Import container
+import App from './containers/App';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+// dbmovie key API
+const API_KEY = "49124c70587c3335fc76661b92d0a962";
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+
+
+ReactDOM.render(<App/>, document.querySelector('.container'));
